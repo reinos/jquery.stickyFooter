@@ -1,0 +1,4 @@
+jquery.stickyFooter
+===================
+
+Easy stickyFooter
