@@ -1,0 +1,25 @@
+{
+  "name": "stickyFooter",
+  "version": "1.0.0",
+  "homepage": "https://github.com/reinos/jquery.stickyFooter",
+  "authors": [
+    "Reinos <info@reinos.nl>"
+  ],
+  "description": "Simply stickyFooter",
+  "main": [
+    "dist/jquery.stickyFooter.js"
+  ],
+  "keywords": [
+    "stickyFooter",
+    "jquery.stickyFooter",
+    "reinos"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
