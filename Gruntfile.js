@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         },
         concat: {
             plugin: {
-                src: ["src/jquery.stickyFooter.js"],
-                dest: "dist/jquery.stickyFooter.js"
+                src: ["src/jquery.stickyfooter.js"],
+                dest: "dist/jquery.stickyfooter.js"
             },
             options: {
                 banner: "<%= banner %>"
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
         },
         uglify: {
             plugin: {
-                src: ["dist/jquery.stickyFooter.js"],
-                dest: "dist/jquery.stickyFooter.min.js"
+                src: ["dist/jquery.stickyfooter.js"],
+                dest: "dist/jquery.stickyfooter.min.js"
             },
             options: {
                 banner: "<%= banner %>"

@@ -1,13 +1,13 @@
 {
   "name": "stickyFooter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/reinos/jquery.stickyFooter",
   "authors": [
     "Reinos <info@reinos.nl>"
   ],
   "description": "Simply stickyFooter",
   "main": [
-    "dist/jquery.stickyFooter.js"
+    "dist/jquery.stickyfooter.js"
   ],
   "keywords": [
     "stickyFooter",

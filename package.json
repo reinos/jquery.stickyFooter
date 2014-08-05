@@ -2,7 +2,7 @@
   "name": "jquery.stickyFooter",
   "version": "1.1.0",
   "description": "Simply stickyFooter",
-  "main": "dist/jquery.stickyFooter.js",
+  "main": "dist/jquery.stickyfooter.js",
   "scripts": {
     "test": "grunt travis --verbose"
   },
