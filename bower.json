@@ -7,7 +7,7 @@
   ],
   "description": "Simply stickyFooter",
   "main": [
-    "dist/jquery.stickyfooter.js"
+    "dist/jquery.stickyFooter.js"
   ],
   "keywords": [
     "stickyFooter",
