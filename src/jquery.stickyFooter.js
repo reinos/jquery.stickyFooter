@@ -41,7 +41,6 @@
             $elem = $(this.element); 
 
          //first reset
-        $elem.prop("style", "");
         $elem.attr("style", "");
          
         //set footer height
@@ -68,7 +67,6 @@
             //must stick to bottom
             $elem.css(css);
         } else {
-            $elem.prop("style", "");
             $elem.attr("style", "");
             $elem.css(obj.options.css);
         }
