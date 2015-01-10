@@ -3,7 +3,8 @@
     var pluginName = "stickyFooter",
         defaults = {
             removeNegativMargin : true,
-            css : {}
+            css : {},
+            executeWhen : function(){return true;}
         };
 
     // The actual plugin constructor
@@ -40,38 +41,52 @@
         var obj = this,
             $elem = $(this.element); 
 
-         //first reset
-        $elem.prop("style", "");
-        $elem.attr("style", "");
-         
-        //set footer height
-        obj.footerHeight = $elem.height();
+        //execute this when the give condition is true
+        if(obj.options.executeWhen()) {
+            //first reset
+            $elem.prop("style", "");
+            $elem.attr("style", "");
+             
+            //set footer height
+            obj.footerHeight = $elem.height();
 
-        //set the top offset
-        var offset = $elem.offset();
-        offset = offset.top || 0;
-      
-        // is there a negativ marign?
-        if(obj.options.removeNegativMargin && $elem.css("margin-top")[0] === "-") {
-            $elem.css("margin-top", 0); 
-        }
+            //set the top offset
+            var offset = $elem.offset();
+            offset = offset.top || 0;
+          
+            // is there a negativ marign?
+            if(obj.options.removeNegativMargin && $elem.css("margin-top")[0] === "-") {
+                $elem.css("margin-top", 0); 
+            }
 
-        if ( offset < ($(window).height()-(obj.footerHeight + 20))){
-            //css
-            var css = $.extend( {}, {
-                position: "fixed",
-                bottom: 0,
-                left:0,
-                right:0
-            }, obj.options.css);
-            
-            //must stick to bottom
-            $elem.css(css);
+            if ( offset < ($(window).height()-(obj.footerHeight + 20))){
+                //css
+                var css = $.extend( {}, {
+                    position: "fixed",
+                    bottom: 0,
+                    left:0,
+                    right:0
+                }, obj.options.css);
+                
+                //must stick to bottom
+                $elem.css(css);
+            } else {
+                //reset
+                $elem.prop("style", "");
+                $elem.attr("style", "");
+                $elem.css(obj.options.css);
+            }
+
+        //otherwhise reset  
         } else {
+            //reset
             $elem.prop("style", "");
             $elem.attr("style", "");
             $elem.css(obj.options.css);
         }
+        
+
+        
     };
 
     // A really lightweight plugin wrapper around the constructor,

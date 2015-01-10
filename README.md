@@ -77,3 +77,14 @@ $("#footer").eqHeight({
 	}
 });
 ```
+
+##### executeWhen
+Simple condition whether the plugin has to be execute or not 
+
+```javascript
+$("#footer").eqHeight({
+    executeWhen: function (){
+    	return $(window).width() > 500; //only execute when the screen resolution is greater then 500px
+	}
+});
+```

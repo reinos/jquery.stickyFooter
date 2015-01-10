@@ -48,7 +48,11 @@
     <script src="../src/jquery.stickyFooter.js"></script>
     <script>
       $(function(){
-        $("#footer").stickyFooter();
+        $("#footer").stickyFooter({
+          executeWhen: function(){
+            return $(window).width() > 770;
+          }
+        });
       });
     </script>
   </body>
