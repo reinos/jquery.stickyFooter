@@ -1,5 +1,5 @@
 /*
- * jquery.stickyFooter - v1.2
+ * jquery.stickyFooter - v1.2.0
  * Simple stickyFooter
  * https://github.com/reinos/jquery.stickyFooter
  *

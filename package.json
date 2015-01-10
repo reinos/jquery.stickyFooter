@@ -1,6 +1,6 @@
 {
   "name": "jquery.stickyFooter",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "Simple stickyFooter",
   "main": "dist/jquery.stickyFooter.js",
   "scripts": {
