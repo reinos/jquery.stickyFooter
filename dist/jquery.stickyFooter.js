@@ -1,5 +1,5 @@
 /*
- * jquery.stickyFooter - v1.2.0
+ * jquery.stickyFooter - v1.2.1
  * Simple stickyFooter
  * https://github.com/reinos/jquery.stickyFooter
  *
@@ -12,7 +12,9 @@
         defaults = {
             removeNegativMargin : true,
             css : {},
-            executeWhen : function(){return true;}
+            executeWhen : function(){
+                return true;
+            }
         };
 
     // The actual plugin constructor
@@ -39,8 +41,12 @@
 		
     	setTimeout(function(){
             $(window)
-                .scroll(function(){obj.positionFooter();})
-                .resize(function(){obj.positionFooter();});
+                .scroll(function(){
+                    obj.positionFooter();
+                })
+                .resize(function(){
+                    obj.positionFooter();
+                });
         }, 100);
     };
 	
@@ -52,7 +58,6 @@
         //execute this when the give condition is true
         if(obj.options.executeWhen()) {
             //first reset
-            $elem.prop("style", "");
             $elem.attr("style", "");
              
             //set footer height
@@ -80,7 +85,6 @@
                 $elem.css(css);
             } else {
                 //reset
-                $elem.prop("style", "");
                 $elem.attr("style", "");
                 $elem.css(obj.options.css);
             }
@@ -88,7 +92,6 @@
         //otherwhise reset  
         } else {
             //reset
-            $elem.prop("style", "");
             $elem.attr("style", "");
             $elem.css(obj.options.css);
         }
